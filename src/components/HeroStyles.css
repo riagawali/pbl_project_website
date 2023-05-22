@@ -1,0 +1,169 @@
+.hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.hero-mid {
+  width: 100%;
+  height: 70vh;
+  position: relative;
+}
+
+.hero-mid h1 {
+  padding-top: 4rem !important;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  background: #fff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-text p {
+  font-size: 1.3rem;
+  /* color: #fff; */
+  padding: 0.5rem 0.2rem 0;
+}
+
+.hero-text .show {
+  text-decoration: none;
+  background: #fff;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: black;
+}
+
+.hero-text .hide {
+  display: none;
+}
+
+@media screen and (max-width: 555px) {
+  .hero-text h1 {
+    padding: 10px 20px;
+  }
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  padding: 0 0 2rem 0;
+}
+
+.hero-text .show {
+  padding: 0.6rem 1.1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.button-container button {
+  margin-bottom: 5px;
+}
+
+/* For modern browsers */
+::placeholder {
+  font-size: 16px; /* Adjust the size as needed */
+}
+
+/* For older browsers (optional) */
+:-ms-input-placeholder {
+  font-size: 16px;
+}
+
+/* For Firefox */
+::-moz-placeholder {
+  font-size: 16px;
+}
+
+/* For Safari, Chrome, and Opera */
+::-webkit-input-placeholder {
+  font-size: 16px;
+}
+
+/* .green-box,
+.red-box {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  position: relative;
+  margin-left: 50%;
+} */
+
+.green-box::before,
+.red-box::before {
+  content: "";
+  position: relative;
+  /* top: 50%;
+  right: 50%; */
+  margin-top: 70%;
+  margin-left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.green-box::before {
+  width: 100%;
+  height: 100%;
+  background-color: green;
+  margin-left: 50%;
+  margin-top: 70%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.red-box::before {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.green-box:hover::before {
+  opacity: 1;
+}
+
+.red-box:hover::before {
+  opacity: 1;
+}
+
+.green-box span,
+.red-box span {
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+.green-box span {
+  font-weight: bold;
+}
+
+.red-box span {
+  font-style: italic;
+}
